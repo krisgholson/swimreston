@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>recordsServlet</servlet-name>
+		<servlet-class>org.rsta.swimreston.server.RecordsServiceImpl
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>recordsServlet</servlet-name>
+		<url-pattern>/swimreston/records</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>recordDetailsServlet</servlet-name>
+		<servlet-class>org.rsta.swimreston.server.RecordDetailsServiceImpl
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>recordDetailsServlet</servlet-name>
+		<url-pattern>/swimreston/recordDetails</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Swimreston.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>
