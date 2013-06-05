@@ -31,10 +31,9 @@ public class RecordDetailsServiceImpl extends RemoteServiceServlet implements
 		try {
 
 			DriverManager.registerDriver(new AppEngineDriver());
-			c = DriverManager
-					.getConnection("jdbc:google:rdbms://swimreston:swimreston/rstadb");
+			c = DriverManager.getConnection(ServerConstants.DB_URL);
 
-			String statement = "SELECT * FROM record where record_name = ?";
+			String statement = "select * from record where record_name = ?";
 			PreparedStatement stmt = c.prepareStatement(statement);
 			stmt.setString(1, name);
 			ResultSet rs = stmt.executeQuery();

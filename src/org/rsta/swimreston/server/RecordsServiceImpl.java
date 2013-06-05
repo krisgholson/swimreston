@@ -30,10 +30,9 @@ public class RecordsServiceImpl extends RemoteServiceServlet implements
 		try {
 
 			DriverManager.registerDriver(new AppEngineDriver());
-			c = DriverManager
-					.getConnection("jdbc:google:rdbms://swimreston:swimreston/rstadb");
+			c = DriverManager.getConnection(ServerConstants.DB_URL);
 
-			String statement = "SELECT DISTINCT (record_name), record_description FROM record ORDER BY record_name";
+			String statement = "select distinct (record_name), record_description from record order by record_name";
 			PreparedStatement stmt = c.prepareStatement(statement);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {

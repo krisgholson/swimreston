@@ -27,6 +27,28 @@
 		<url-pattern>/swimreston/recordDetails</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>findAthletesServlet</servlet-name>
+		<servlet-class>org.rsta.swimreston.server.FindAthletesServiceImpl
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>findAthletesServlet</servlet-name>
+		<url-pattern>/swimreston/findAthletes</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>athleteResultsServlet</servlet-name>
+		<servlet-class>org.rsta.swimreston.server.AthleteResultsServiceImpl
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>athleteResultsServlet</servlet-name>
+		<url-pattern>/swimreston/athleteResults</url-pattern>
+	</servlet-mapping>
+
 	<!-- Default page to serve -->
 	<welcome-file-list>
 		<welcome-file>Swimreston.html</welcome-file>

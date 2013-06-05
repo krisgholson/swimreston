@@ -11,6 +11,7 @@ public class Meet implements Serializable {
 	private String name;
 	private Date date;
 	private String location;
+	private Integer year;
 
 	public Integer getId() {
 		return id;
@@ -42,6 +43,14 @@ public class Meet implements Serializable {
 
 	public void setLocation(String location) {
 		this.location = location;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 }

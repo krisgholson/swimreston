@@ -16,6 +16,8 @@
 	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark' /> -->
 
 	<!-- Other module inherits -->
+	<inherits name="com.google.gwt.logging.Logging" />
+	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
 
 	<!-- Specify the app entry point class. -->
 	<entry-point class='org.rsta.swimreston.client.Swimreston' />

@@ -97,4 +97,24 @@ public final class Utilities {
 		}
 		return distance.toString() + " " + strokeName;
 	}
+
+	public static String formatAthleteName(String firstName,
+			String middleInitial, String lastName, Integer age) {
+
+		String name = middleInitial != null && middleInitial.length() > 0 ? firstName
+				+ " " + middleInitial + ". " + lastName
+				: firstName + " " + lastName;
+		name += " (" + age + ")";
+		return name;
+	}
+
+	public static String formatAthleteDisplay(Athlete athlete) {
+		String name = formatAthleteName(athlete.getFirstName(),
+				athlete.getMiddleInitial(), athlete.getLastName(),
+				athlete.getAge());
+		if (athlete.getTeam() != null && athlete.getTeam().getName() != null) {
+			name += " " + athlete.getTeam().getName();
+		}
+		return name;
+	}
 }

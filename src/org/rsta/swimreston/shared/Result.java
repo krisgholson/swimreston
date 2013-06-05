@@ -18,6 +18,7 @@ public class Result implements Serializable {
 	private Integer points;
 	private Integer place;
 	private Integer rank;
+	private Integer year;
 
 	public Integer getId() {
 		return id;
@@ -121,6 +122,14 @@ public class Result implements Serializable {
 
 	public void setRank(Integer rank) {
 		this.rank = rank;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 }

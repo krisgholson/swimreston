@@ -12,6 +12,7 @@ public class Athlete implements Serializable {
 	private String sex;
 	private Integer age;
 	private Team team;
+	private Integer year;
 
 	public Integer getId() {
 		return id;
@@ -67,6 +68,14 @@ public class Athlete implements Serializable {
 
 	public void setTeam(Team team) {
 		this.team = team;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 }

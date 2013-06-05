@@ -10,6 +10,7 @@ public class Team implements Serializable {
 	private String code;
 	private String name;
 	private String shortName;
+	private Integer year;
 
 	public Integer getId() {
 		return id;
@@ -41,6 +42,14 @@ public class Team implements Serializable {
 
 	public void setShortName(String shortName) {
 		this.shortName = shortName;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
 	}
 
 }
